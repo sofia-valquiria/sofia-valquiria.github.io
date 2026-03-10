@@ -48,10 +48,16 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--cloud-white);
 }
 
+strong {
+    color: var(--accent-color);
+}
+
 p {
     color: var(--text-lighter);
     margin-bottom: 1rem;
 }
+
+
 
 a {
     color: var(--accent-color);
@@ -79,7 +85,7 @@ img {
 /* --------- NAVIGATION BAR --------- */
 nav {
     background: linear-gradient(135deg, rgba(29, 90, 140, 0.95) 0%, rgba(45, 90, 140, 0.95) 50%, rgba(26, 58, 92, 0.95) 100%),
-                url('img/cielo%20expandido.png') center/cover;
+                url('../img/cielo.png') center/cover;
     background-attachment: fixed;
     color: var(--cloud-white);
     padding: 1.5rem 2rem;
@@ -88,6 +94,39 @@ nav {
     z-index: 100;
     box-shadow: var(--shadow-lg);
     border-bottom: 2px solid var(--accent-color);
+}
+
+.little-prince {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding-bottom: 2rem;
+}
+
+.little-prince figure {
+    width: 100%;
+    border: 1px solid var(--accent-color);
+}
+
+
+.little-prince figure img{
+    width: 100%;
+}
+
+
+.little-prince figcaption {
+    background-color: var(--primary-dark);
+    color: var(--accent-light);
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.6rem;
+}
+
+.little-prince p {
+    width: 70vw;
+    padding-right: 2rem;
 }
 
 .navbar-content {
