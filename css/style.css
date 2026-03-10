@@ -288,6 +288,7 @@ main {
     right: 1rem;
 }
 
+
 @media (max-width: 768px) {
     .carousel-wrapper img {
         height: 250px;
@@ -403,13 +404,9 @@ main {
 }
 
 @media (max-width: 768px) {
-    .featured-image {
-        height: 300px;
-    }
-
-    .featured-section figcaption {
-        padding: 1rem;
-        font-size: 1rem;
+    .little-prince {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
