@@ -5,16 +5,20 @@
 
 /* --------- CSS VARIABLES & ROOT --------- */
 :root {
-    --primary-color: #0066cc;
-    --primary-dark: #004499;
+    --primary-color: #2d5a8c;
+    --primary-dark: #1a3a5c;
     --accent-color: #00d4ff;
-    --text-dark: #1a1a1a;
-    --text-light: #666666;
-    --bg-light: #f8f9fa;
-    --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --accent-light: #66e6ff;
+    --sky-blue: #1e90ff;
+    --cloud-white: #e8f4ff;
+    --text-light: #e8e8e8;
+    --text-lighter: #b0b0b0;
+    --bg-dark: #0a0e27;
+    --bg-darker: #050812;
+    --bg-card: #1a2847;
+    --border-color: #2d4a7a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.6);
     --transition: all 0.3s ease;
 }
 
@@ -31,31 +35,33 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-white);
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 50%, #0f1a35 100%);
+    background-attachment: fixed;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
-    color: var(--text-dark);
+    color: var(--cloud-white);
 }
 
 p {
-    color: var(--text-light);
+    color: var(--text-lighter);
     margin-bottom: 1rem;
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--accent-color);
     text-decoration: none;
     transition: var(--transition);
 }
 
 a:hover,
 a:focus {
-    color: var(--primary-dark);
+    color: var(--accent-light);
     text-decoration: underline;
 }
 
@@ -72,13 +78,16 @@ img {
 
 /* --------- NAVIGATION BAR --------- */
 nav {
-    background-color: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(135deg, rgba(29, 90, 140, 0.95) 0%, rgba(45, 90, 140, 0.95) 50%, rgba(26, 58, 92, 0.95) 100%),
+                url('img/cielo%20expandido.png') center/cover;
+    background-attachment: fixed;
+    color: var(--cloud-white);
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .navbar-content {
@@ -98,16 +107,18 @@ nav {
 }
 
 .navbar-brand h1 {
-    color: var(--bg-white);
+    color: var(--cloud-white);
     font-size: 1.5rem;
     margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .tagline {
-    color: var(--accent-color);
+    color: var(--accent-light);
     font-size: 0.9rem;
     margin: 0;
     font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-links {
@@ -118,23 +129,25 @@ nav {
 }
 
 .navbar-links a {
-    color: var(--bg-white);
+    color: var(--cloud-white);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: var(--transition);
+    border: 1px solid transparent;
 }
 
 .navbar-links a:hover,
 .navbar-links a:focus {
-    background-color: var(--primary-dark);
+    background-color: rgba(0, 212, 255, 0.2);
+    border: 1px solid var(--accent-color);
     text-decoration: none;
 }
 
 /* --------- RESPONSIVE NAVBAR --------- */
 @media (max-width: 768px) {
     nav {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .navbar-content {
@@ -144,7 +157,7 @@ nav {
     }
 
     .navbar-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
         width: 100%;
     }
@@ -162,6 +175,14 @@ main {
     padding: 3rem 2rem;
 }
 
+#title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent-light);
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+}
+
 /* --------- CAROUSEL SECTION --------- */
 .carousel-section {
     margin-bottom: 4rem;
@@ -172,7 +193,8 @@ main {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
-    background-color: var(--bg-light);
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
 }
 
 .carousel-wrapper {
@@ -188,18 +210,21 @@ main {
     flex: 0 0 auto;
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: var(--bg-darker);
     border-radius: 6px;
     scroll-snap-align: start;
+    border: 1px solid var(--border-color);
 }
 
 .carousel-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 102, 204, 0.8);
-    color: white;
-    border: none;
+    background-color: rgba(45, 90, 140, 0.9);
+    color: var(--accent-light);
+    border: 1px solid var(--accent-color);
     padding: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
@@ -211,8 +236,9 @@ main {
 .carousel-nav:hover,
 .carousel-nav:focus {
     background-color: var(--primary-dark);
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
+    border: 2px solid var(--accent-light);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
 }
 
 .carousel-nav.prev {
@@ -244,10 +270,12 @@ main {
 
 /* --------- PRESENTATION SECTION --------- */
 .presentation-section {
-    background-color: var(--bg-light);
+    background-color: var(--bg-card);
     padding: 3rem;
     border-radius: 8px;
     margin-bottom: 4rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
 }
 
 .presentation-content {
@@ -258,13 +286,36 @@ main {
 .presentation-content h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--accent-light);
 }
 
 .presentation-content p {
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-info p {
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.contact-info ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-info a {
+    color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -282,31 +333,34 @@ main {
 }
 
 /* --------- FEATURED IMAGE SECTION --------- */
-.featured-section {
+.portrait {
     margin-bottom: 4rem;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
 }
 
-.featured-section figure {
+.portrait figure {
     margin: 0;
+    width: 100%;
+    background-color: var(--bg-card);
 }
-
-.featured-image {
+.portrait-image {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    display: block;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.featured-section figcaption {
-    background-color: var(--bg-light);
+.portrait figcaption {
+    background-color: var(--primary-dark);
     padding: 1.5rem;
     text-align: center;
     font-weight: 500;
-    color: var(--text-dark);
-    font-size: 1.1rem;
+    color: var(--accent-light);
+    font-size: 3rem;
+    border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 768px) {
@@ -329,7 +383,8 @@ main {
     font-size: 2rem;
     margin-bottom: 2.5rem;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--accent-light);
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
 }
 
 .skills-grid {
@@ -339,24 +394,27 @@ main {
 }
 
 .skill-card {
-    background-color: var(--bg-light);
+    background-color: var(--bg-card);
     padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--accent-color);
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .skill-card:hover,
 .skill-card:focus-within {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
+    border: 1px solid var(--accent-color);
+    background-color: rgba(45, 90, 140, 0.3);
 }
 
 .skill-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--accent-light);
 }
 
 .skill-card ul {
@@ -366,7 +424,7 @@ main {
 
 .skill-card li {
     padding: 0.5rem 0;
-    color: var(--text-light);
+    color: var(--text-lighter);
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -374,7 +432,7 @@ main {
 
 .skill-card li:before {
     content: "✓";
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -400,13 +458,175 @@ main {
     }
 }
 
+/* --------- EXPERIENCE SECTION --------- */
+.experience-section {
+    margin-bottom: 4rem;
+}
+
+.experience-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--accent-light);
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-color) 0%, var(--border-color) 100%);
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 50%;
+    padding-right: 3rem;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+    margin-right: 0;
+    padding-left: 3rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border: 3px solid var(--bg-dark);
+    border-radius: 50%;
+    top: 0;
+    right: -60px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -60px;
+    right: auto;
+}
+
+.timeline-date {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cloud-white);
+}
+
+.timeline-content .company {
+    color: var(--accent-light);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content .location {
+    color: var(--text-lighter);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .timeline-item::before,
+    .timeline-item:nth-child(even)::before {
+        left: 0;
+        right: auto;
+    }
+}
+
+/* --------- TEACHING SECTION --------- */
+.teaching-section {
+    margin-bottom: 4rem;
+}
+
+.teaching-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--accent-light);
+    text-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+}
+
+.teaching-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.teaching-item {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.teaching-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-light);
+}
+
+.teaching-item .date {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.teaching-item .location {
+    color: var(--text-lighter);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
 /* --------- FOOTER --------- */
 footer {
-    background-color: var(--primary-color);
-    color: var(--bg-white);
+    background: linear-gradient(135deg, rgba(26, 58, 92, 0.95) 0%, rgba(45, 90, 140, 0.95) 50%, rgba(29, 90, 140, 0.95) 100%);
+    color: var(--cloud-white);
     padding: 2rem;
     text-align: center;
     margin-top: 4rem;
+    border-top: 2px solid var(--accent-color);
+    box-shadow: inset 0 2px 8px rgba(0, 212, 255, 0.1);
 }
 
 .footer-content {
@@ -415,18 +635,18 @@ footer {
 }
 
 footer p {
-    color: var(--bg-white);
+    color: var(--text-lighter);
     margin: 0.75rem 0;
 }
 
 footer a {
-    color: var(--accent-color);
+    color: var(--accent-light);
     font-weight: 500;
 }
 
 footer a:hover,
 footer a:focus {
-    color: var(--bg-white);
+    color: var(--cloud-white);
 }
 
 @media (max-width: 768px) {
@@ -460,8 +680,8 @@ footer a:focus {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--primary-color);
-    color: white;
+    background: var(--accent-color);
+    color: var(--bg-dark);
     padding: 8px;
     text-decoration: none;
     z-index: 100;
