@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,15 @@
     <meta name="description" content="Sofía Valquiria - Programmer">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/eye.jpeg" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <title>Sofía Valquiria - Programmer</title>
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav role="navigation" aria-label="Main Navigation">
         <div class="navbar-content">
@@ -18,8 +24,9 @@
                 <p class="tagline">Programmer</p>
             </div>
             <ul class="navbar-links">
-                <li><a href="#about" tabindex="0">About</a></li>
-                <li><a href="#skills" tabindex="0">Skills</a></li>
+                <li><a href="./html/about.html" tabindex="0">About</a></li>
+                <li><a href="./html/skills.html" tabindex="0">Skills</a></li>
+                <li><a href="./html/pixelart.html" tabindex="0">My Pixelart</a></li>
                 <li><a href="https://github.com/sofia-valquiria/" target="_blank" rel="noopener noreferrer" tabindex="0">GitHub</a></li>
             </ul>
         </div>
@@ -27,224 +34,143 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Full-Width Portrait Section -->
-        <section class="portrait" aria-label="Featured work showcase">
-            <figure>
-                <img src="./img/sofia-valquiria.jpg" alt="A picture of Sofía Valquiria" class="portrait-image" loading="lazy">
-                <figcaption>This is me! (this is real 🎶)</figcaption>
-            </figure>
-        </section>
+
+        <h1 class="title">SE VIENE S0FΙ_FEST_2K27</h1>
 
 
-        <!-- Personal Presentation Section -->
-        <section class="presentation-section" id="about" aria-labelledby="about-title">
-            <article class="presentation-content">
-                <h2 id="about-title">About Me 👩🏽‍💻🏳️‍⚧️🌈</h2>
-                <p>
-                    <strong>Hello there!</strong> If you're reading this, you're probably looking to hire me, or at least know more about me. Either/or, let me help you.
-                </p>
-                <p>
-                    I'm a 26 y.o. trans woman from Argentina, who happens to be many things: Amateur astronomer, gardener, philosopher, avid reader, all-around nerd, <strong>Professional Tutor</strong>, <strong>Interpreter</strong>, <strong>Functional Analyst</strong>, natural born problem-solver, and, most importantly for me to talk about here a <strong>Programmer</strong>! 
-                </p>
-                <section class="little-prince">
-                <p>    
-                    Regarding the latter, I'm part self-taught (I have been programming since I was 17) and part formally educated. The two things I value about myself (and other people) are: <strong>Child-like curiosity</strong> - I'm kind of like the Little Prince in that sense: I never let go of a question once I have asked it - and, of course, <strong>Radical Empathy!</strong> In my case this means that I'm always trying to understand the problem from the perspective of the user, the client, and the team. For it is <strong>only when we all understand each other</strong>, and speak each others' languages, so to speak, <strong>that true cooperative projects (like software development) can be successful and gratifying for all parts involved</strong> - be it the CEO, CTO, Sr, SSr, Jr, Trainee, or Client/s.
-                </p>
-                <figure>
-                    <img src="./img/little-prince-quote.png" alt="An image of The Little Prince besides a quote from that book that reads: 'All grown-ups were once children... but only few of them remember it.'">
-                    <figcaption>My favorite quote, from one of my favorite books: The Little Prince, by Antoine Saint-Exupéry</figcaption>
-                </figure>
-                
-                </section>
-                <p>    
-                    At the moment, I'm pursuing my degree in <strong>Computer Science</strong> at <strong>U.N.T.</strong> (which stands for Universidad Nacional de Tucumán: spanish for National University of Tucumán, Argentina) while working as an <strong>Independent Tutor</strong>
-                    teaching subjects like <strong>Mathematics, English, and Programming</strong> to a wide and diverse range of learners: men, women, teens, and children from all walks of life.
-                </p>
-                <p>
-                    With experience in <strong>Banking systems analysis</strong>, <strong>mobile app development</strong> with Flutter, and <strong>web technologies</strong>, 
-                    I combine <strong>technical proficiency</strong> with <strong>strong communication skills</strong> honed through <strong>International Interpreting and Translating</strong> work.
-                </p>
-                <p> 
-                    My background spans <strong>Full-Stack Development, System Administration, Bot creation, Experience with APIs and Docker Containers, Database management, Deep understanding of Unix-based systems</strong> (Terminal & VIM commands, some basic POSSIX-compliant shell-scrpiting, and understanding how these type of OSs are generally built from the ground up - I used to install Arch Linux from scratch for funsies and spend hours upon hours reading documentation, and when I was working with Flutter I was also provided with a Macbook, which also gives me experience with MacOS), <strong> Self-learning, and Teaching,</strong> allowing me to approach problems with the interdisciplinary mindset necessary for 21st Century Software Development.
-                  </p>
-                  <p>I'm also, and not to brag, probably the most extroverted programmer you'll ever meet! And some have even said I'm lowkey funny too, though that judgement is ultimately up to you, dear reader.</p>
-                <div class="contact-info">
-                    <p><strong>Contact:</strong></p>
-                    <ul>
-                        <li>Email: <a href="mailto:sofiavalquiriasandoval@gmail.com">sofiavalquiriasandoval@gmail.com</a></li>
-                        <li>Location: Tucumán, Argentina</li>
-                        <li>GitHub: <a href="https://github.com/sofia-valquiria/" target="_blank" rel="noopener noreferrer">sofia-valquiria</a></li>
-                    </ul>
-                </div>
-            </article>
-        </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section" id="skills" aria-labelledby="skills-title">
-            <h2 id="skills-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <h3>Programming Languages</h3>
-                      <ul>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>C#</li>
-                        <li>Python</li>
-                        <li>JS & TS</li>
-                        <li>Dart</li>
-                        <li>PHP</li>
-                        <li>POSIX compliant shell scripting</li>
-                      </ul>
-                </article>    
-                <article class="skill-card">  
-                  <h3>Front End</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Bootstrap 5</li>
-                        <li>React</li>
-                        <li>Flutter & Dart</li>
-                    </ul>
-                </article>
-                <article class="skill-card">
-                    <h3>Back End</h3>
-                    <ul>
-                        <li>Node.js & npm</li>
-                        <li>Python's pip</li>
-                        <li>PHP & Laravel</li>
-                        <li>SQL & NoSQL Databases</li>
-                        <li>RESTful APIs</li>
-                        <li>MVC understanding</li>
-                        <li>HTTP & HTTPS protocol understanding</li>
-                    </ul>
-                </article>
-                <article class="skill-card">
-                    <h3>DevOps & Infrastructure</h3>
-                    <ul>
-                        <li>Docker & Containers</li>
-                        <li>Linux (Server, Desktop)</li>
-                        <li>Repositories, Terminal Commands (PS, Bash, Zsh), SSH, Vim, Virtual Machines</li>
-                        <li>Building an Arch Linux/Windows 11 Dual Boot w/o archinstall</li>
-                    </ul>
-                </article>
-                <article class="skill-card">
-                    <h3>Tools & Technologies</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Advanced Microsoft Office / LibreOffice</li>
-                        <li>Jira & Trello</li>
-                        <li>Postman</li>
-                        <li>Figma</li>
-                        <li>Claude, Copilot & other AI tools</li>
-                        <li>Advanced Audiovisual editing skills (Adobe) </li>
-                        <li>Systems Administration</li>
-                        <li>API Integration</li>
-                    </ul>
-                </article>
-                <article class="skill-card">
-                    <h3>Additional Skills</h3>
-                    <ul>
-                        <li>OOP</li>
-                        <li>Software Installation & Hardware Maintenance</li>
-                        <li>Android & iOS Development</li>
-                        <li>Functional Analysis</li>
-                        <li>Agile Development Experience</li>
-                        <li>Unit Testing & Debugging</li>
-                        <li>Ability to read all relevant Documentation BEFORE asking a Sr./Ssr.</li>
-                        <li>Documenting, Commenting & following Best Practices</li>
-                    </ul>
-                </article>
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Form with Bootstrap</title>
+            <link
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              rel="stylesheet"
+            />
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+            <div class="container">
+              <div class="form-container">
+                <h4 class="text-center mb-4">Formulario para S0F1-F35T</h4>
+                <form id="sofifest">
+                  <div class="form-group">
+                    <label for="name">Nombre/s:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="nombre"
+                      id="nombre"
+                      placeholder="Ingresá tu/s nombre/s"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="apellido">Apellido/s</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="apellido"
+                      id="apellido"
+                      placeholder="Ingresá tu/s apellido/s"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+
+                    <label for="equipo">Elegí un equipo (sujeto a posibles cambios)</label>
+                    <select class="form-control" name="equipo" id="equipo" required>
+                      <option value="" disabled selected hidden>Equipo...</option>
+                      <option value="Veneno">Veneno</option>
+                      <option value="Hada">Hada</option>
+                      <option value="Oscuro">Oscuro</option>
+                      <option value="Psiquico">Psíquico</option>
+
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sugerencia"> ¿Alguna sugerencia de dinámica competitiva por equipos? Te leo</label>
+                    <textarea
+                      class="form-control"
+                      name="sugerencia"
+                      id="sugerencia"
+                      placeholder="Ej: Deberías hacer una batalla de aura"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+
+                    <label for="equipo">¿Querés participar en la Expo de Autismos? (5min para hablar, cantar, recitar, presentar, etc... sobre lo que quieras) </label>
+                    <select class="form-control" name="reserva_tiempo" id="reserva_tiempo" required>
+                      <option value="reserva_tiempo?" disabled selected hidden>"___ quiero"</option>
+                      <option default value="no_reserva_tiempo">No</option>
+                      <option value="si_reserva_tiempo">Sí</option>
+
+                    </select>
+                  </div>
+
+                    <label for="comentario">Alguna otra cosa importante? Algo que decir, pedir, ofrecer, aclarar, etc. ?</label>
+                    <textarea
+                      class="form-control"
+                      name="comentario"
+                      id="comentario"
+                      placeholder="Ej: Yo puedo llevar mi proyector pq te quiero mucho, sofi / Yo no tomo alcohol ni consumo drogas ni carne ni me divierto"
+                    ></textarea>
+
+                  <div class="form-group form-check mt-2">
+                    <input class="form-check-input" type="checkbox" id="es_mayor" name="es_mayor"/>
+                    <label class="form-check-label" for="es_mayor"
+                      >Hacé click si sos mayor de edad (solo para gente de edad >= a 18 años)</label
+                    >
+                  </div>
+                  <div class="form-group form-check">
+                    <input class="form-check-input" type="checkbox" id="waver" required />
+                    <label class="form-check-label" for="waver"
+                      >Al darle click a esta cajita aceptás que, por ser boludx grande ya, que te vas a saber manejar, y que te harás cargo monetariamente de cualquier cosa que llegases a arruinar físicamente de cualquier forma interpretable, <strong>trato hecho nunca deshecho</strong>"
+                    </label>
+                  </div>
+                  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+                  <button type="submit" class="btn btn-dark btn-block">
+                    Enviar
+                  </button>
+                </form>
+              </div>
             </div>
-        </section>
 
-        <!-- Professional Experience Section -->
-        <section class="experience-section" aria-labelledby="experience-title">
-            <h2 id="experience-title">Professional Experience</h2>
-            <div class="timeline">
-                <article class="timeline-item">
-                    <div class="timeline-date">
-                        <time datetime="2025-02">February 2025</time> - <time datetime="2025-06">June 2025</time>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Functional Analyst - Banking Systems</h3>
-                        <p class="company">Accion Point</p>
-                        <p class="location">Remote</p>
-                        <p>Specialized functional analyst for banking accounting systems and operative core systems (BanTotal). 
-                        Worked on system requirements, testing, and implementation for financial operations.</p>
-                    </div>
-                </article>
+            <script> const form = document.getElementById('sofifest');
+            const endpoint = 'https://script.google.com/macros/s/AKfycbwfpvQr83qBddgvjHrx-Y7SavXbRPajjRyYl-bdlt9R2BS_eveq1nO2y4pGx_WaADsdzg/exec';
 
-                <article class="timeline-item">
-                    <div class="timeline-date">
-                        <time datetime="2024-06">June 2024</time> - <time datetime="2025-01">January 2025</time>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>English/Spanish Interpreter</h3>
-                        <p class="company">Multilingual Interpreters BCPO (a subsidiary of Boostlingo)</p>
-                        <p class="location">Remote</p>
-                        <p>Telephone and Videocall interpreter for international calls across diverse industries including healthcare, corporate, judicial, education, and billing sectors. Maintained accuracy and professionalism in high-pressure environments.</p>
-                    </div>
-                </article>
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const data = new FormData(form);
+              try {
+                await fetch(endpoint, { method: 'POST', body: data });
+                form.reset();
+                alert('Enviado correctamente');
+              } catch (err) {
+                alert('Error 6767 (pasa, somos humanos) avisale a la sofi');
+              }
+            });
+            </script>
+          </body>
+        </html>
 
-                <article class="timeline-item">
-                    <div class="timeline-date">
-                        <time datetime="2021-06">June 2021</time> - <time datetime="2021-12">December 2021</time>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Front End Developer - Flutter/Dart</h3>
-                        <p class="company">Globant</p>
-                        <p class="location">Yerba Buena, Tucumán</p>
-                        <p>Front-end developer specializing in Flutter and Dart for iOS devices. Worked on mobile application 
-                        development for a major hotel chain, focusing on user interface and user experience.</p>
-                    </div>
-                </article>
+
+
+
+
+        <!-- Footer -->
+        <footer role="contentinfo" aria-label="Site footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Sofía Valquiria. All rights reserved. ©</p>
+                <p><a href="https://github.com/sofia-valquiria/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a></p>
             </div>
-        </section>
-
-        <!-- Teaching Section -->
-        <section class="teaching-section" aria-labelledby="teaching-title">
-            <h2 id="teaching-title">Teaching</h2>
-            <article class="teaching-content">
-                <div class="teaching-item">
-                    <h3>Independent Educator</h3>
-                    <p class="date"><time datetime="2025-06">June 2025</time> - Present</p>
-                    <p class="location">Remote & In-person</p>
-                    <p>
-                        Teaching Mathematics, English, and Programming to adult learners. Providing academic support 
-                        and tutoring for primary and secondary school students across all subjects. My preferred way of teaching is through <strong>having a class 0</strong>, where I talk to students in order to find out how they best learn (each person learns differently, after all), what is it that they are truly passionate about (so I can best integrate their interests into our classes), and finally why they want to learn what they are learning - so as to best motivate them to keep studying as consistently as they can.  
-                    </p>
-                </div>
-            </article>
-        </section>
-    </main>
-    
-    <h2 id="title">And finally a collection of my pixelart, hope you enjoyed my page!</h2>
-        <!-- Image Carousel Section -->
-        <section class="carousel-section" aria-label="Portfolio Images Carousel">
-            <div class="carousel-container">
-                <div class="carousel-wrapper">
-                    <img src="img/characters.png" alt="Pixelart character collection" loading="lazy">
-                    <img src="img/josevaca.png" alt="Pixelart character - Jose Vaca" loading="lazy">
-                    <img src="img/lluviaknight.png" alt="Pixelart character - Lluvia Knight" loading="lazy">
-                    <img src="img/mesi invertido final.png" alt="Pixelart artwork - Mesi Invertido" loading="lazy">
-                    <img src="img/scene11.png" alt="Pixelart scene 11" loading="lazy">
-                    <img src="img/scene2.png" alt="Pixelart scene 2" loading="lazy">
-                    <img src="img/scene3.png" alt="Pixelart scene 3" loading="lazy">
-                </div>
-                <button class="carousel-nav prev" aria-label="Previous image" tabindex="0">❮</button>
-                <button class="carousel-nav next" aria-label="Next image" tabindex="0">❯</button>
-            </div>
-        </section>
-
-    <!-- Footer -->
-    <footer role="contentinfo" aria-label="Site footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Sofía Valquiria. All rights reserved. ©</p>
-            <p><a href="https://github.com/sofia-valquiria/" target="_blank" rel="noopener noreferrer">Visit my GitHub</a></p>
-        </div>
-    </footer>
-
-    <script src="js/carousel.js"></script>
-</body>
-</html>
+        </footer>
+    </body>
+    </html>
