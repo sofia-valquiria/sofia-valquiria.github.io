@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     const prevBtn = document.querySelector('.carousel-nav.prev');
     const nextBtn = document.querySelector('.carousel-nav.next');
-    
+
     if (!carouselWrapper || !prevBtn || !nextBtn) return;
 
     const scrollAmount = carouselWrapper.offsetWidth * 0.8;
