@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,11 @@
     <meta name="description" content="Sofía Valquiria - Programmer">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/eye.jpeg" type="image/x-icon">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <title>Sofía Valquiria - Programmer</title>
 </head>
 <body>
@@ -34,27 +38,10 @@
         <h1 class="title">SE VIENE S0FΙ_FEST_2K27</h1>
 
 
-
-        <!DOCTYPE html>
-        <html lang="en">
-          <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Form with Bootstrap</title>
-            <link
-              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-              rel="stylesheet"
-            />
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-
-          </head>
             <div class="container">
               <div class="form-container">
-                <h4 class="text-center mb-4">Form Submission to Google Sheet</h4>
-                <form id="submit-to-google-sheet">
+                <h4 class="text-center mb-4">Formulario para S0F1-F35T</h4>
+                <form id="sofifest">
                   <div class="form-group">
                     <label for="name">Nombre/s:</label>
                     <input
@@ -89,20 +76,40 @@
                       <option value="Psiquico">Psíquico</option>
 
                     </select>
-
+                  </div>
 
                   <div class="form-group">
-                    <label for="loc"></label>
+                    <label for="sugerencia"> ¿Alguna sugerencia de dinámica competitiva por equipos? Te leo</label>
                     <textarea
                       class="form-control"
-                      name="message"
-                      id="message"
-                      placeholder="Message"
-                      required
+                      name="sugerencia"
+                      id="sugerencia"
+                      placeholder="Ej: Deberías hacer una batalla de aura"
                     ></textarea>
+                  </div>
+
+                  <div class="form-group">
+
+                    <label for="equipo">¿Querés participar en la Expo de Autismos? (5min para hablar, cantar, recitar, presentar, etc... sobre lo que quieras) </label>
+                    <select class="form-control" name="reserva_tiempo" id="reserva_tiempo" required>
+                      <option value="reserva_tiempo?" disabled selected hidden>"___ quiero"</option>
+                      <option default value="no_reserva_tiempo">No quiero</option>
+                      <option value="si_reserva_tiempo">Sí quiero</option>
+
+                    </select>
+                  </div>
+
+                    <label for="comentario">Alguna otra cosa importante? Algo que decir, pedir, ofrecer, aclarar, etc. ?</label>
+                    <textarea
+                      class="form-control"
+                      name="comentario"
+                      id="comentario"
+                      placeholder="Ej: Yo puedo llevar mi proyector pq te quiero mucho, sofi / Yo no tomo alcohol ni consumo drogas ni carne ni me divierto"
+                    ></textarea>
+
                   <div class="form-group form-check mt-2">
-                    <input class="form-check-input" type="checkbox" id="age" />
-                    <label class="form-check-label" for="age"
+                    <input class="form-check-input" type="checkbox" id="es_mayor" name="es_mayor"/>
+                    <label class="form-check-label" for="es_mayor"
                       >Hacé click si sos mayor de edad (solo para gente de edad >= a 18 años)</label
                     >
                   </div>
@@ -112,42 +119,28 @@
                       >Al darle click a esta cajita aceptás que, por ser boludx grande ya, que te vas a saber manejar, y que te harás cargo monetariamente de cualquier cosa que llegases a arruinar físicamente de cualquier forma interpretable, <strong>trato hecho nunca deshecho</strong>"
                     </label>
                   </div>
-                  <button type="submit" class="btn btn-primary btn-block">
+                  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+                  <button type="submit" class="btn btn-dark btn-block">
                     Enviar
                   </button>
                 </form>
               </div>
             </div>
 
-            <script>
-              const scriptURL =
-              "https://script.google.com/macros/s/AKfycbxrIg9NY7kFDCs9YgXgCRBZf44954OgFNu4Hc7VLrEpnH1rpDe9eiDjjA5PR23IfmlglQ/exec";
-              const form = document.forms["submit-to-google-sheet"];
-              form.addEventListener("submit", (e) => {
-                e.preventDefault();
-                var formData = new FormData(form);
-                var ex = document.getElementById("ex").checked;
-                var age = document.getElementById("age").checked;
+            <script> const form = document.getElementById('sofifest');
+            const endpoint = 'https://script.google.com/macros/s/AKfycbwfpvQr83qBddgvjHrx-Y7SavXbRPajjRyYl-bdlt9R2BS_eveq1nO2y4pGx_WaADsdzg/exec';
 
-                if (age) {
-                  formData.append("age", "Yes");
-                } else {
-                  formData.append("age", "No");
-                }
-                if (ex) {
-                  formData.append("ex", "Yes");
-                } else {
-                  formData.append("ex", "No");
-                }
-
-                fetch(scriptURL, { method: "POST", body: formData })
-                  .then((response) => {
-                    swal("Done", "Submitted Successfully.", "success");
-                  })
-                  .catch((error) => {
-                    swal("Error", "Something went wrong. please try again!", "error");
-                  });
-              });
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const data = new FormData(form);
+              try {
+                await fetch(endpoint, { mode: "no-cors", method: 'POST', body: data });
+                form.reset();
+                alert('Enviado correctamente');
+              } catch (err) {
+                alert(err);
+              }
+            });
             </script>
           </body>
         </html>
