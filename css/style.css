@@ -381,6 +381,10 @@ main {
     border: 1px solid var(--border-color);
 }
 
+.invi {
+    width: auto;
+}
+
 .portrait figure {
     margin: 0;
     width: 100%;
