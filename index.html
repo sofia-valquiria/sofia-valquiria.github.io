@@ -134,11 +134,11 @@
               e.preventDefault();
               const data = new FormData(form);
               try {
-                await fetch(endpoint, { method: 'POST', body: data });
+                await fetch(endpoint, { mode: "no-cors", method: 'POST', body: data });
                 form.reset();
                 alert('Enviado correctamente');
               } catch (err) {
-                alert('Error 6767 (pasa, somos humanos) avisale a la sofi');
+                alert(err);
               }
             });
             </script>
