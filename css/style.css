@@ -42,14 +42,16 @@ body {
 
     font-family: 'Source Code Pro', sans-serif;
     color: var(--text-light);
-    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 80%, rgba(168, 0, 135, 0.25) 200%);
-    background-attachment: fixed;
+    background-color: #1e1e1e;
+    background: url(https://i.pinimg.com/originals/f8/c8/45/f8c845288fa9b7362f990d235eb0a384.jpg);
+    background-repeat: repeat;
+    background-blend-mode: hue;
     line-height: 1.6;
-    min-height: 100vh;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: lighter;
+    font-weight: light;
     color: var(--cloud-white);
 }
 
@@ -88,7 +90,7 @@ img {
 nav {
     background: linear-gradient(135deg, rgba(35, 12, 51, 0.95) 0%, rgba(140, 72, 176, 0.95) 50%, rgba(35, 12, 51, 0.95) 100%),
                 url('../img/cielo.png') center/cover;
-    background-attachment: fixed;
+
     color: var(--cloud-white);
     padding: 1.5rem 2rem;
     position: sticky;
@@ -106,6 +108,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: var(--bg-card);
   color: var(--text-light);
+  font-weight: bold;
 }
 
 .little-prince {
@@ -140,13 +143,12 @@ nav {
 }
 
 .navbar-content {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-item: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .navbar-brand {
@@ -174,13 +176,12 @@ nav {
     list-style: none;
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items:flex-start;
 }
 
 .navbar-links a {
     color: var(--cloud-white);
     font-weight: 500;
-    padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: var(--transition);
     border: 1px solid transparent;
@@ -207,12 +208,10 @@ nav {
     .navbar-links {
         flex-direction: row;
         gap: 0.5rem;
-        width: 100%;
     }
 
     .navbar-links a {
-        display: block;
-        padding: 0.75rem 1rem;
+        padding: 0.75rem;
     }
 }
 
@@ -221,12 +220,13 @@ main {
     padding: 3rem 2rem;
 }
 .title {
-    text-align: justify;
-    font-size: 5rem;
+    max-width: 80vw;
+    font-weight: bolder;
+    text-align: center;
     margin-bottom: 2rem;
-    text-align: justify;
     color: var(--accent-light);
     text-shadow: 0 2px 8px rgba(211, 134, 212, 0.25);
+
 }
 
 .carousel-section {
@@ -264,13 +264,12 @@ main {
 }
 
 .carousel-nav {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(140, 72, 176, 0.9);
     color: var(--accent-light);
     border: 1px solid var(--accent-color);
-    padding: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
     border-radius: 4px;
