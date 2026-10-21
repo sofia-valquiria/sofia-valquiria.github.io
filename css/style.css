@@ -13,9 +13,11 @@
     --cloud-white: #D386D4;
     --text-light: #D386D4;
     --text-lighter: #8C48B0;
+    --text-dark: #230C33;
+    --text-darker: #230C33;
     --bg-dark: #230C33;
     --bg-darker: #230C33;
-    --bg-card: rgba(140, 72, 176, 0.15);
+    --bg-card: rgba(23, 12, 33, 0.85);
     --border-color: #8C48B0;
     --shadow: 0 2px 8px rgba(35, 12, 51, 0.5);
     --shadow-lg: 0 4px 16px rgba(35, 12, 51, 0.7);
@@ -148,6 +150,7 @@ nav {
     justify-content: space-around;
     align-item: center;
     flex-wrap: wrap;
+    flex-grow: 5;
     gap: 1rem;
 }
 
@@ -183,8 +186,10 @@ nav {
     color: var(--cloud-white);
     font-weight: 500;
     border-radius: 4px;
+    padding: 1vw;
     transition: var(--transition);
     border: 1px solid transparent;
+    flex-grow: 5;
 }
 
 .navbar-links a:hover,
@@ -208,9 +213,11 @@ nav {
     .navbar-links {
         flex-direction: row;
         gap: 0.5rem;
+        flex-grow: 5;
     }
 
     .navbar-links a {
+        flex-grow: 5;
         padding: 0.75rem;
     }
 }
@@ -418,6 +425,7 @@ main {
 }
 
 .skills-section {
+
     margin-bottom: 4rem;
 }
 
@@ -464,17 +472,18 @@ main {
     padding: 0;
 }
 
-.skill-card li {
+.skill-card ul li {
     padding: 0.5rem 0;
-    color: var(--text-lighter);
     display: flex;
-    align-items: center;
+    font-weight: bold;
     gap: 0.75rem;
+
+    color: var(--text-light);
 }
 
 .skill-card li:before {
     content: "✓";
-    color: var(--accent-color);
+    color: var(--text-lighter);
     font-weight: bold;
     font-size: 1.2rem;
 }
