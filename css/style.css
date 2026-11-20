@@ -13,9 +13,11 @@
     --cloud-white: #D386D4;
     --text-light: #D386D4;
     --text-lighter: #8C48B0;
+    --text-dark: #230C33;
+    --text-darker: #230C33;
     --bg-dark: #230C33;
     --bg-darker: #230C33;
-    --bg-card: rgba(140, 72, 176, 0.15);
+    --bg-card: rgba(23, 12, 33, 0.85);
     --border-color: #8C48B0;
     --shadow: 0 2px 8px rgba(35, 12, 51, 0.5);
     --shadow-lg: 0 4px 16px rgba(35, 12, 51, 0.7);
@@ -45,10 +47,12 @@ body {
 
     font-family: 'Source Code Pro', sans-serif;
     color: var(--text-light);
-    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 80%, rgba(168, 0, 135, 0.25) 200%);
-    background-attachment: fixed;
+    background-color: #1e1e1e;
+    background: url(https://i.pinimg.com/originals/f8/c8/45/f8c845288fa9b7362f990d235eb0a384.jpg);
+    background-repeat: repeat;
+    background-blend-mode: hue;
     line-height: 1.6;
-    min-height: 100vh;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,7 +95,7 @@ img {
 nav {
     background: linear-gradient(135deg, rgba(35, 12, 51, 0.95) 0%, rgba(140, 72, 176, 0.95) 50%, rgba(35, 12, 51, 0.95) 100%),
                 url('../img/cielo.png') center/cover;
-    background-attachment: fixed;
+
     color: var(--cloud-white);
     padding: 1.5rem 2rem;
     position: sticky;
@@ -109,6 +113,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: var(--bg-card);
   color: var(--text-light);
+  font-weight: bold;
 }
 
 .little-prince {
@@ -143,13 +148,13 @@ nav {
 }
 
 .navbar-content {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-item: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    flex-grow: 5;
+    gap: 1rem;
 }
 
 .navbar-brand {
@@ -177,16 +182,17 @@ nav {
     list-style: none;
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items:flex-start;
 }
 
 .navbar-links a {
     color: var(--cloud-white);
     font-weight: 500;
-    padding: 0.5rem 1rem;
     border-radius: 4px;
+    padding: 1vw;
     transition: var(--transition);
     border: 1px solid transparent;
+    flex-grow: 5;
 }
 
 .navbar-links a:hover,
@@ -210,12 +216,12 @@ nav {
     .navbar-links {
         flex-direction: row;
         gap: 0.5rem;
-        width: 100%;
+        flex-grow: 5;
     }
 
     .navbar-links a {
-        display: block;
-        padding: 0.75rem 1rem;
+        flex-grow: 5;
+        padding: 0.75rem;
     }
 }
 
@@ -224,12 +230,13 @@ main {
     padding: 3rem 2rem 0rem 2rem;
 }
 .title {
-    text-align: justify;
-    font-size: 5rem;
+    max-width: 80vw;
+    font-weight: bolder;
+    text-align: center;
     margin-bottom: 2rem;
-    text-align: justify;
     color: var(--accent-light);
     text-shadow: 0 2px 8px rgba(211, 134, 212, 0.25);
+
 }
 
 .carousel-section {
@@ -267,13 +274,12 @@ main {
 }
 
 .carousel-nav {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(140, 72, 176, 0.9);
     color: var(--accent-light);
     border: 1px solid var(--accent-color);
-    padding: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
     border-radius: 4px;
@@ -422,6 +428,7 @@ main {
 }
 
 .skills-section {
+
     margin-bottom: 4rem;
 }
 
@@ -468,17 +475,18 @@ main {
     padding: 0;
 }
 
-.skill-card li {
+.skill-card ul li {
     padding: 0.5rem 0;
-    color: var(--text-lighter);
     display: flex;
-    align-items: center;
+    font-weight: bold;
     gap: 0.75rem;
+
+    color: var(--text-light);
 }
 
 .skill-card li:before {
     content: "✓";
-    color: var(--accent-color);
+    color: var(--text-lighter);
     font-weight: bold;
     font-size: 1.2rem;
 }
